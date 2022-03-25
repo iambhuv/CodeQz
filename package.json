@@ -19,7 +19,8 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-parallax-tilt": "^1.6.6"
   },
   "devDependencies": {
     "eslint": "latest",
