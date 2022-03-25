@@ -1,0 +1,99 @@
+@import "colors";
+
+.home {
+  margin-top: 3.6rem;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6.8rem 1.2rem;
+
+  .inner_container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .search_box {
+    display: flex;
+    position: relative;
+
+    .search_input {
+    }
+    .search_btn {
+      position: absolute;
+      right: 0.5rem;
+      height: 2.4rem;
+      width: 2.4rem;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .quiz_list_wrapper {
+    margin: 2.6rem 0;
+
+    .list_title {
+      font-size: 1.4rem;
+    }
+
+    .quiz_list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      grid-auto-flow: dense row;
+
+      .quiz_list_item {
+        border: 1px solid $SCROLLBAR_BG;
+        background: rgba($color: $BG_PAPER_NO_ALPHA, $alpha: 0.25);
+        border-radius: 0.25rem;
+        transition: background 0.25s;
+
+        &:hover {
+          background: rgba($color: $BG_PAPER_NO_ALPHA, $alpha: 0.72);
+        }
+
+        .quiz_list_item_inner {
+          padding: 0.6rem 1rem;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          justify-content: flex-start;
+          align-items: flex-start;
+          min-height: 5.4rem;
+          transition: box-shadow 0.3s;
+
+          .quiz_title {
+            font-size: 1.12rem;
+          }
+          .quiz_description {
+            font-size: 0.92rem;
+            color: rgba($color: $PRIMARY_TEXT, $alpha: 0.72);
+          }
+
+          .quiz_time_wrapper {
+            margin-top: 0.2rem;
+          }
+
+          .quiz_leaderboard_btn {
+            position: absolute;
+            bottom: 0.4rem;
+            right: 0.4rem;
+            color: $PRIMARY;
+            border: 0.6px solid $PRIMARY;
+            padding: 0.2rem;
+            border-radius: 0.18rem;
+          }
+        }
+      }
+
+      @media only screen and (max-width: 786px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+.highlight_span {
+  color: $PRIMARY;
+  font-weight: 500;
+}

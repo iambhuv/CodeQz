@@ -1,0 +1,21 @@
+@import "colors";
+
+.navbar {
+  width: "100%";
+  position: "absolute";
+  background: $NAVBAR_BG;
+  height: 3.6rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  z-index: 99999999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo a {
+  font-size: 1.72rem;
+  text-decoration: none;
+  color: $PRIMARY_TEXT;
+}

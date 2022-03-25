@@ -1,0 +1,9 @@
+Colors we are gonna use in this project
+
+~ PRIMARY : #477db8
+~ CONTRAST : #fffaff
+~ BACKGROUND : #19222a
+~ BACKGROUND_PAPER : #1e29339c
+~ DIVIDER : #2f3c49da
+~ PRIMARY_TEXT : #f3f3f3db
+~ SECONDARY_TEXT : #bccfe2
