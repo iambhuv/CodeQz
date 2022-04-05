@@ -15,3 +15,7 @@ const Index = () => {
 };
 
 export default Index;
+
+
+// Thats it for today :)
+// Hope you got the source code from github

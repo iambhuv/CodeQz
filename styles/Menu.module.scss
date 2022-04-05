@@ -1,0 +1,27 @@
+.account_menu {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem !important;
+
+    svg {
+      font-size: 38px;
+    }
+
+    .img_wrapper {
+      position: relative;
+      height: 34px;
+      width: 34px;
+    }
+  }
+}
