@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
 
 // Create a theme instance.
 const theme = createTheme({
@@ -8,12 +7,13 @@ const theme = createTheme({
     primary: {
       main: "#477db8",
       contrastText: "#fffaff",
+      dark: "#1d5db1",
     },
     secondary: {
       main: "#bccfe2",
     },
     error: {
-      main: red.A400,
+      main: "#ff0e0e",
     },
     background: {
       default: "#121920",
@@ -26,7 +26,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Google Sans, Poppins"
+    fontFamily: "Google Sans, Poppins",
   }
 });
 

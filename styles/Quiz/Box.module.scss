@@ -1,0 +1,67 @@
+@import "../colors";
+
+.box {
+  max-width: 400px;
+  width: 100%;
+  height: fit-content;
+  background: $BACKGROUND_PAPER;
+  border-radius: 0.3rem;
+  box-shadow: #17172040 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
+  padding: 1rem 1.14rem;
+  position: relative;
+
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.3rem;
+    border-end-end-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+
+    &:not(:only-child) {
+      margin-bottom: 0.32rem;
+    }
+  }
+
+  .info_list {
+    .info_list_item {
+      margin: 0.3rem 0 0.3rem 1.5rem;
+    }
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.32rem;
+
+    .btn {
+      flex: 1;
+    }
+
+    .btn_sm {
+      padding: 0.4rem !important;
+      min-width: 2.2rem !important;
+      transition: background 0.3s, border 0.3s, color 0.3s !important;
+      font-size: 1.08rem;
+
+      .MuiTouchRipple-child {
+        background: #ff0e0e00 !important;
+      }
+
+      &:not(:hover) {
+        color: #ff0e0ebc !important;
+      }
+    }
+
+    &:not(:only-child) {
+      margin-top: 0.42rem;
+    }
+  }
+}
