@@ -7,7 +7,7 @@ import Link from "next/link";
 const QuizListItem = () => {
   return (
     <Tilt className={styles.quiz_list_item} tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02}>
-      <Link href={"/quiz/javascript-mock-test"} passhref>
+      <Link href={"/quiz/javascript-mock-test"} passHref>
       <ButtonBase className={styles.quiz_list_item_inner} sx={{ boxShadow: 2, ":hover": { boxShadow: 6 }, ".MuiTouchRipple-child": { background: "#29343f" } }}>
         <Typography className={styles.quiz_title}>Javascript Mock Test</Typography>
         <Typography className={styles.quiz_description}>Javascript Interview Questions Quiz</Typography>
