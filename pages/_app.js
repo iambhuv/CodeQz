@@ -10,6 +10,9 @@ import "../styles/globals.scss";
 import Navbar from "../src/components/Navbar";
 import { useRouter } from "next/router";
 import { LinearProgress } from "@mui/material";
+import { Provider } from "react-redux";
+import store from "../src/redux/store";
+import Alert from "../src/components/Alert";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -21,7 +24,6 @@ export default function MyApp(props) {
   React.useEffect(() => {
     const handleStart = () => setLoading(true);
     const handleStop = () => setLoading(false);
-    console.log(router);
 
     // SUS, lol it was on n off
     router.events.on("routeChangeStart", handleStart);
@@ -37,18 +39,21 @@ export default function MyApp(props) {
   }, [router]);
 
   return (
-    <CacheProvider value={emotionCache}>
-      <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"></link>
-      </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {loading && <LinearProgress color="secondary" sx={{ zIndex: 999999999, height: 2.4, position: "fixed", top: 0, left: 0, width: "100%" }} />}
-        <Navbar />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </CacheProvider>
+    <Provider store={store}>
+      <CacheProvider value={emotionCache}>
+        <Head>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+          <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"></link>
+        </Head>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Alert />
+          {loading && <LinearProgress color="secondary" sx={{ zIndex: 999999999, height: 2.4, position: "fixed", top: 0, left: 0, width: "100%" }} />}
+          <Navbar />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
+    </Provider>
   );
 }
 

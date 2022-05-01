@@ -1,0 +1,95 @@
+@import "./colors";
+
+.alert_container {
+  width: 100%;
+  height: 100vh;
+  background: #0000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999999999999999;
+  animation: cont_opening 0.15s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_closing {
+    animation: cont_closing 0.1s linear forwards;
+  }
+
+  @keyframes cont_opening {
+    to {
+      background: #0004;
+    }
+  }
+
+  @keyframes cont_closing {
+    to {
+      background: #0000;
+    }
+  }
+
+  .alert_box {
+    background: $BG_PAPER_NO_ALPHA;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 280px;
+    opacity: 0.4;
+    transform: scale(0.92);
+    animation: box_opening 0.15s linear forwards;
+
+    &_closing {
+      animation: box_closing 0.1s linear forwards;
+    }
+
+    @keyframes box_opening {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes box_closing {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+    }
+
+    .alert_title {
+      color: $SECONDARY_TEXT;
+      font-size: 1rem;
+    }
+
+    .close_alert {
+      position: absolute;
+      top: 0.62rem;
+      right: 0.72rem;
+      width: 1.85rem;
+      height: 1.85rem;
+      font-size: 1.2rem;
+    }
+
+    .alert_text {
+      color: #fff;
+      font-size: 1.46rem;
+
+      &:not(:only-child) {
+        margin-bottom: 0.42rem;
+      }
+    }
+
+    .alert_okay {
+      max-width: 260px !important;
+    }
+  }
+}
